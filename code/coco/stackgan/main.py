@@ -1,4 +1,4 @@
-from __future__ import print_function
+# from __future__ import print_function
 # import torch.backends.cudnn as cudnn
 import torch
 import torchvision.transforms as transforms
@@ -96,6 +96,7 @@ if __name__ == "__main__":
         algo = GANTrainer(output_dir)
         algo.train(dataloader, cfg.STAGE)
     else:
+        #https://github.com/taoxugit/AttnGAN/blob/0d000e652b407e976cb88fab299e8566f3de8a37/code/main.py#L146
         datapath= '%s/test/' % (cfg.DATA_DIR)
         algo = GANTrainer(output_dir)
         algo.sample(datapath, num_samples=5, stage=cfg.STAGE, draw_bbox=False)
