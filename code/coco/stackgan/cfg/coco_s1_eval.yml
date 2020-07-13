@@ -1,0 +1,25 @@
+CONFIG_NAME: 'stageI'
+
+DATASET_NAME: 'coco'
+EMBEDDING_TYPE: 'cnn-rnn'
+GPU_ID: '0'
+Z_DIM: 100
+NET_G: '../../../models/pretrained_model.pth'
+IMG_DIR: "../../../data/MS-COCO/test/val2014"
+DATA_DIR: '../../../data/MS-COCO'
+WORKERS: 4
+IMSIZE: 256
+STAGE: 2
+USE_BBOX_LAYOUT: True
+TRAIN:
+    FLAG: False
+    BATCH_SIZE: 100
+
+GAN:
+    CONDITION_DIM: 128
+    DF_DIM: 96
+    GF_DIM: 192
+    R_NUM: 2
+
+TEXT:
+    DIMENSION: 1024
